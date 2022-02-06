@@ -10,5 +10,15 @@
 8. Exception Hanlder was used standardise the exception handling
 9. Unit test could have been better
 
+#What could have been done better?
+1. more unit testing
+2. localsed error messages
+3. integration testing for OAS required fields
+4. Linting
+5. small and simple K6
+6. 100% securing the endpoint
+7. 100% encrypt the CSV file as it has BSB/Account and Payment details
+
+
 # Run
 mvn clean install spring-boot:run
