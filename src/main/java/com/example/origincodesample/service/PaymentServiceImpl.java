@@ -38,7 +38,7 @@ public class PaymentServiceImpl implements PaymentService{
     }
 
     private Double calculateGst(Double amount) {
-        return amount + (amount+100/100);
+        return amount * 110/100;
     }
 
 
