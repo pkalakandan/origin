@@ -1,14 +1,11 @@
 package com.example.origincodesample.validator;
 
 import com.example.origincodesample.dto.PaymentDto;
-import org.joda.time.DateTime;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
-
-import static java.time.DayOfWeek.SUNDAY;
 
 
 @Component
