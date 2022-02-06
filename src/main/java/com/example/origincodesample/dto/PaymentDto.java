@@ -1,16 +1,13 @@
 package com.example.origincodesample.dto;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class PaymentDto {
-
-    private Long id = null;
-
-    private String referenceNumber = null;
-
-    private Integer bsb = null;
-
-    private Integer accountNumber = null;
-
-    private Integer amount = null;
+    private Long id;
+    private String referenceNumber;
+    private Integer bsb;
+    private Integer accountNumber;
+    private Integer amount;
 
     public PaymentDto id(Long id) {
         this.id = id;
@@ -80,6 +77,5 @@ public class PaymentDto {
     public void setAmount(Integer amount) {
         this.amount = amount;
     }
-
 
 }
