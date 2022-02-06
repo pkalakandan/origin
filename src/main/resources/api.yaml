@@ -40,18 +40,18 @@ components:
     Payment:
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
-          readOnly: true
         referenceNumber:
           type: string
+          required: true
         bsb:
           type: integer
           format: int32
+          required: true
         accountNumber:
           type: integer
           format: int32
+          required: true
         amount:
-          type: integer
-          format: int32
+          type: number
+          format: double
+          required: true

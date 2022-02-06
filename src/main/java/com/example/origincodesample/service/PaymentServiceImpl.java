@@ -12,8 +12,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
 import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -21,6 +19,7 @@ public class PaymentServiceImpl implements PaymentService{
     @Override
     public PaymentDto savePayment(PaymentDto in)  {
         StatefulBeanToCsv<PaymentDto> beanToCsv = null;
+        in.setTotalAmount(calculateGst(in.getAmount()));
         try {
             Writer w = new FileWriter("payment-" + new Timestamp(System.currentTimeMillis()) + "-" + UUID.randomUUID() + ".csv");
             beanToCsv = new StatefulBeanToCsvBuilder(w)
@@ -37,4 +36,10 @@ public class PaymentServiceImpl implements PaymentService{
         }
         return in;
     }
+
+    private Double calculateGst(Double amount) {
+        return amount + (amount+100/100);
+    }
+
+
 }
