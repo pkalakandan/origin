@@ -9,3 +9,6 @@
 7. Open CSV was used to create CSV from DTO
 8. Exception Hanlder was used standardise the exception handling
 9. Unit test could have been better
+
+# Run
+mvn clean install spring-boot:run
